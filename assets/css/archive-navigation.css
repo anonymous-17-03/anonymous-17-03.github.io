@@ -1,0 +1,10 @@
+/* Navegación añadida al archivo histórico. No modifica sus imágenes. */
+.nh-archive-nav,.nh-archive-footer{box-sizing:border-box;width:100%;background:#101827;color:#edf3fb;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65;text-align:left;padding:24px max(20px,calc((100% - 800px)/2))}
+.nh-archive-nav *,.nh-archive-footer *{box-sizing:border-box}
+.nh-archive-nav a,.nh-archive-footer a{color:#a8cef5;text-decoration:underline;text-underline-offset:4px}
+.nh-archive-nav a:focus-visible,.nh-archive-footer a:focus-visible{outline:3px solid #a7d8c9;outline-offset:4px}
+.nh-archive-nav .nh-top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;margin-bottom:24px}
+.nh-archive-nav h1{font-size:clamp(23px,5vw,34px);line-height:1.2;margin:0 0 12px;color:#edf3fb;overflow-wrap:anywhere}
+.nh-archive-nav p,.nh-archive-footer p{font-size:13px;color:#acbbce;margin:0;max-width:800px}
+.nh-archive-nav .nh-label{font-size:10px;letter-spacing:2px;color:#a7d8c9;margin-bottom:10px}
+.nh-archive-footer{margin-top:0;padding-block:26px}
