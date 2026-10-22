@@ -36,7 +36,7 @@
     />
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="assets/css/portfolio.css" />
-    <script src="assets/js/portfolio.js" defer></script>
+    <script src="assets/js/experience.js" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -54,8 +54,11 @@
         ]
       }
     </script>
-  </head>
+  <link rel="stylesheet" href="assets/css/experience.css?v=2">
+</head>
   <body>
+<div class="reading-progress" aria-hidden="true"><span></span></div>
+<div class="ambient-light" aria-hidden="true"></div>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <header class="site-header">
       <div class="container header-inner">
@@ -72,7 +75,8 @@
         >
           Menú <span aria-hidden="true">☰</span>
         </button>
-        <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
+        <button class="command-trigger" type="button" hidden aria-label="Buscar en el portfolio"><span aria-hidden="true">⌕</span> Explorar <kbd>Ctrl K</kbd></button>
+<nav id="main-nav" class="main-nav" aria-label="Navegación principal">
           <a href="#sobre-mi">Sobre mí</a><a href="#proyectos">Proyectos</a
           ><a href="#writeups">Writeups</a><a href="cv/">Currículum</a
           ><a class="nav-contact" href="#contacto"
@@ -114,7 +118,7 @@
             >
           </div>
         </div>
-        <figure class="portrait">
+        <div class="hero-visual"><div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div><span class="floating-label label-top" aria-hidden="true">&lt;/&gt; Linux &amp; código</span><figure class="portrait">
           <div class="portrait-top">
             <span>WHOAMI</span><span>01 / VG</span>
           </div>
@@ -129,8 +133,9 @@
             <strong>Víctor García</strong
             ><span>Anonymous17 <span aria-hidden="true">↗</span></span>
           </figcaption>
-        </figure>
-      </section>
+        </figure><span class="floating-label label-bottom" aria-hidden="true"><span class="status-dot"></span> Aprendizaje en movimiento</span><div class="visual-coordinate" aria-hidden="true">ANONYMOUS17 / PANAMÁ</div></div>
+      <a class="scroll-cue" href="#sobre-mi"><span>Desliza para explorar</span><span aria-hidden="true">↓</span></a>
+</section>
       <div class="focus-strip">
         <div class="container">
           <span>Seguridad ofensiva</span><span aria-hidden="true">/</span
@@ -382,7 +387,7 @@
               >Ir a NovaHacking ↗</a
             >
           </aside>
-          <div class="archive-toolbar" hidden data-filter-toolbar>
+          <div class="archive-toolbar" hidden data-filter-toolbar><label class="archive-search"><span class="sr-only">Buscar writeup</span><span aria-hidden="true">⌕</span><input id="archive-search" type="search" placeholder="Busca una máquina…" autocomplete="off"></label>
             <div
               class="filters"
               role="group"
@@ -415,7 +420,7 @@
               5 publicaciones
             </p>
           </div>
-          <div class="archive-grid">
+          <p id="archive-empty" hidden>No hay writeups con ese nombre en este filtro. Prueba otra búsqueda.</p><div class="archive-grid">
             <article class="archive-card" data-platform="dockerlabs">
               <a
                 class="archive-image"
@@ -590,7 +595,7 @@
               >Escríbeme <span aria-hidden="true">↗</span></a
             >
           </div>
-          <div class="contact-links">
+          <div class="contact-links"><button class="copy-email" type="button" hidden>Copiar correo <span aria-hidden="true">⧉</span></button>
             <a href="mailto:victordgarciap2003@gmail.com"
               ><span>CORREO</span
               ><strong>victordgarciap2003@gmail.com ↗</strong></a
@@ -619,5 +624,8 @@
         Prácticas de seguridad en CTFs, laboratorios y entornos autorizados.
       </p>
     </footer>
-  </body>
+  <div class="utility-dock" hidden><button class="dock-search" type="button" aria-label="Buscar en el portfolio">⌕ <span>Explorar</span><kbd>Ctrl K</kbd></button><span class="dock-divider" aria-hidden="true"></span><button class="motion-toggle" type="button" aria-pressed="false">Pausar efectos</button><a href="#inicio" aria-label="Volver al inicio">↑</a></div>
+<dialog id="command-dialog" aria-labelledby="command-title"><div class="dialog-top"><h2 id="command-title">¿Qué quieres explorar?</h2><button class="dialog-close" type="button" aria-label="Cerrar búsqueda">✕</button></div><label class="command-field"><span aria-hidden="true">⌕</span><span class="sr-only">Buscar proyectos, secciones o writeups</span><input id="command-input" type="search" placeholder="Proyectos, CV, Buffered…" autocomplete="off"></label><div id="command-results" class="command-results"></div><p id="command-empty" hidden>No hay coincidencias. Prueba con «Linux», «CV» o «writeups».</p><div class="command-footer"><span><kbd>Tab</kbd> navegar · <kbd>Enter</kbd> abrir</span><span><kbd>Esc</kbd> cerrar</span></div></dialog>
+<div class="toast" role="status" aria-live="polite"></div>
+</body>
 </html>
